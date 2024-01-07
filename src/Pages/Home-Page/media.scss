@@ -1,0 +1,196 @@
+@media screen and (max-width: 950px) {
+  main {
+    .skills_section {
+      padding: 15px;
+      .skills_container {
+        .skills_box {
+          .instruments_inner_box {
+            .col {
+              width: 50%;
+              .box {
+                .instruments_name {
+                  font-size: 18px;
+                }
+                .rotate_box_info {
+                  span {
+                    font-size: 15px;
+                  }
+                  p {
+                    overflow: scroll;
+                    font-size: 11px;
+                    line-height: 21px;
+                  }
+                }
+              }
+            }
+          }
+          .skills_inner_box {
+            .col {
+              width: 50%;
+              .box {
+                .skill_name {
+                  font-size: 18px;
+                }
+                .rotate_box_info {
+                  span {
+                    font-size: 15px;
+                  }
+                  p {
+                    overflow: scroll;
+                    font-size: 11px;
+                    line-height: 21px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    .about_section {
+      padding: 80px 20px;
+    }
+    .introduce_section {
+      padding: 15px;
+      .introduce_container {
+        .introduce_row {
+          .col-6 {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .about_section {
+      .about_container {
+        .about_box {
+          .about_image {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .empty-wrapper {
+    display: none;
+  }
+  main {
+    width: 100%;
+    .introduce_section {
+      .introduce_container {
+        .introduce_row {
+          .col-6 {
+            .box_personal {
+              .developer_personal {
+                font-size: 26px;
+              }
+              .developer_descr {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .skills_section {
+      .skills_container {
+        .skills_box {
+          .instruments_title {
+            font-size: 29px;
+          }
+          .skills_inner_box {
+            .col-hide {
+              animation: blockHide 0.5s forwards;
+            }
+            .col-show {
+              animation: blockShow 0.5s forwards;
+            }
+          }
+          @keyframes blockShow {
+            0% {display: none; opacity: 0;}
+            100% {display: block; opacity: 1;}
+          }
+          @keyframes blockHide {
+            0% {display: block; opacity: 1;}
+            100% {display: none; opacity: 0;}
+          }
+          .skills_title {
+            font-size: 29px;
+          }
+          .show_blocks {
+            display: block;
+          }
+        }
+      }
+    }
+    .about_section {
+      .about_container {
+        .about_box {
+          .about_inner_box {
+            left: 0;
+            width: 100%;
+            .about_descr {
+              font-size: 19px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  main {
+    .about_section {
+      padding: 80px 20px 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    .about_section {
+      padding-bottom: 200px;
+    }
+    .skills_section {
+      .skills_container {
+        .skills_box {
+          .instruments_inner_box {
+            .col {
+              width: 100%;
+            }
+          }
+          .skills_inner_box {
+            .col {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main {
+    .about_section {
+      padding-bottom: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  main {
+    .about_section {
+      padding-bottom: 320px;
+    }
+  }
+}

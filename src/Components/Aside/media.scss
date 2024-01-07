@@ -1,0 +1,110 @@
+@media screen and (max-width: 780px) {
+  .aside.Opened {
+    max-height: 100vh;
+    transition: max-height 0.5s ease-in-out;
+  }
+  .aside {
+    z-index: 999;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 80px;
+    transition: max-height 0.5s ease-in-out;
+    .aside-container {
+      justify-content: flex-start;
+      .info_box {
+        .info_box_position {
+          flex: 1 1 auto;
+          .person_position {
+            opacity: 1;
+          }
+          .person_name {
+            opacity: 1;
+          }
+        }
+        .burger_box {
+          display: flex;
+          button {
+            border: none;
+            background: none;
+            i {
+              font-size: 20px;
+              color: #20232a;
+            }
+          }
+        }
+      }
+      .routes_box {
+        flex-grow: 0;
+        .routes_inner_box {
+          i {
+            display: none;
+          }
+          .routes_name {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 781px) {
+  .aside {
+    .aside-container {
+      .info_box {
+        .burger_box {
+          display: none;
+        }
+      }
+      .mode_box {
+        .mode_box_inner {
+          width: 25%;
+        }
+      }
+    }
+  }
+  .aside:hover {
+    width: 15%;
+    min-width: 250px;
+    transition: 0.5s ease-in-out;
+    .aside-container {
+      .routes_box {
+        .routes_inner_box {
+          .routes_name {
+            opacity: 1;
+            transition: 0.2s;
+          }
+        }
+      }
+      .info_box {
+        .info_box_position {
+          .person_name {
+            opacity: 1;
+            transition: 0.5s ease-in-out;
+          }
+          .person_position {
+            opacity: 1;
+            transition: 0.5s ease-in-out;
+          }
+        }
+      }
+      .mode_box {
+        .mode_box_inner {
+          width: 100%;
+          .mode_box_inner_box {
+            .mode_name {
+              display: block;
+              opacity: 1;
+              transition: 0.2s;
+            }
+          }
+          .repeat_icon {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
