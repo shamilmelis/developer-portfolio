@@ -7,6 +7,8 @@
           .instruments_inner_box {
             .col {
               width: 50%;
+              flex-basis: 50%;
+              transition: 0.5s ease-in-out;
               .box {
                 .instruments_name {
                   font-size: 18px;
@@ -27,6 +29,8 @@
           .skills_inner_box {
             .col {
               width: 50%;
+              flex-basis: 50%;
+              transition: 0.5s ease-in-out;
               .box {
                 .skill_name {
                   font-size: 18px;
@@ -36,13 +40,24 @@
                     font-size: 15px;
                   }
                   p {
-                    overflow: scroll;
-                    font-size: 11px;
+                    font-size: 14px;
                     line-height: 21px;
                   }
                 }
               }
             }
+          }
+        }
+      }
+    }
+    .socialmedia_section {
+      padding: 15px;
+      .socialmedia_container {
+        .socialmedia_row {
+          .col {
+            width: 50%;
+            flex-basis: 50%;
+            transition: 0.5s ease-in-out;
           }
         }
       }
@@ -61,6 +76,8 @@
         .introduce_row {
           .col-6 {
             width: 100%;
+            flex-basis: 100%;
+            transition: flex 0.5s ease-in-out;
           }
         }
       }
@@ -70,6 +87,8 @@
         .about_box {
           .about_image {
             width: 70%;
+            flex-basis: 70%;
+            transition: flex 0.5s ease-in-out;
           }
         }
       }
@@ -83,6 +102,8 @@
   }
   main {
     width: 100%;
+    flex-basis: 100%;
+    transition: flex 0.5s ease-in-out;
     .introduce_section {
       .introduce_container {
         .introduce_row {
@@ -130,12 +151,21 @@
         }
       }
     }
+    .socialmedia_section {
+      .socialmedia_container {
+        .socialmedia_title {
+          font-size: 29px;
+        }
+      }
+    }
     .about_section {
       .about_container {
         .about_box {
           .about_inner_box {
             left: 0;
             width: 100%;
+            flex-basis: 100%;
+            transition: flex 0.5s ease-in-out;
             .about_descr {
               font-size: 19px;
               line-height: 28px;
@@ -150,15 +180,7 @@
 @media screen and (max-width: 440px) {
   main {
     .about_section {
-      padding: 80px 20px 150px;
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  main {
-    .about_section {
-      padding-bottom: 200px;
+      padding: 80px 20px 200px;
     }
     .skills_section {
       .skills_container {
@@ -166,12 +188,27 @@
           .instruments_inner_box {
             .col {
               width: 100%;
+              flex-basis: 100%;
+              transition: 0.5s ease-in-out;
             }
           }
           .skills_inner_box {
             .col {
               width: 100%;
+              flex-basis: 100%;
+              transition: 0.5s ease-in-out;
             }
+          }
+        }
+      }
+    }
+    .socialmedia_section {
+      .socialmedia_container {
+        .socialmedia_row {
+          .col {
+            width: 100%;
+            flex-basis: 100%;
+            transition: 0.5s ease-in-out;
           }
         }
       }

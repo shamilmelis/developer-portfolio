@@ -53,7 +53,7 @@ const HomePage = () => {
                 <section className={'skills_section'}>
                     <div className={'skills_container'}>
                         <div className={'skills_box'}>
-                            <h1 className={'instruments_title'}>Инструменты</h1>
+                            <h1 className={'instruments_title'}>Инструменты 🛠️</h1>
                             <div className={'instruments_inner_box'}>
                                 <div className={'col'}>
                                     <div className={'box'}>
@@ -101,7 +101,7 @@ const HomePage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <h1 className={'skills_title'}>Навыки</h1>
+                            <h1 className={'skills_title'}>Навыки 📌</h1>
                             <div className={'skills_inner_box'}>
                                 <div className={'col'}>
                                     <div className={'box'}>
@@ -231,6 +231,37 @@ const HomePage = () => {
                                 </div>
                             </div>
                             <button className={'show_blocks'} onClick={() => toggleBlocks()}>{blocks === false ? 'Показать еще' : 'Скрыть'}</button>
+                        </div>
+                    </div>
+                </section>
+                <section className={'socialmedia_section'}>
+                    <div className={'socialmedia_container'}>
+                        <h1 className={'socialmedia_title'}>Соц.сети 📲</h1>
+                        <div className={'socialmedia_row'}>
+                            <div className={'col'}>
+                                <div className={'box'}>
+                                    <a href="https://www.weblancer.net/users/shm_HTML/" className={'wrapper_link'}></a>
+                                    <img src="https://www.weblancer.net/img/freelance.png" alt="pic" className={'socialmedia_img'}/>
+                                    <span className={'socialmedia_name'}>Weblancer</span>
+                                    <span className={'route_to'}>👉ТЫКАЙ👈</span>
+                                </div>
+                            </div>
+                            <div className={'col'}>
+                                <div className={'box'}>
+                                    <a href="https://habr.com/ru/users/dexr0w/" className={'wrapper_link'}></a>
+                                    <img src="https://habr.com/img/habr_ru.png" alt="pic" className={'socialmedia_img'}/>
+                                    <span className={'socialmedia_name'}>Хабр</span>
+                                    <span className={'route_to'}>👉ТЫКАЙ👈</span>
+                                </div>
+                            </div>
+                            <div className={'col'}>
+                                <div className={'box'}>
+                                    <a href="https://career.habr.com/dexr0w" className={'wrapper_link'}></a>
+                                    <img src="https://career.habr.com/images/career_share.png" alt="pic" className={'socialmedia_img'}/>
+                                    <span className={'socialmedia_name'}>Хабр Карьера</span>
+                                    <span className={'route_to'}>👉ТЫКАЙ👈</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
