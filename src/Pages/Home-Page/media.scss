@@ -18,8 +18,8 @@
                     font-size: 15px;
                   }
                   p {
-                    overflow: scroll;
-                    font-size: 11px;
+                    overflow: auto;
+                    font-size: 14px;
                     line-height: 21px;
                   }
                 }
@@ -40,6 +40,7 @@
                     font-size: 15px;
                   }
                   p {
+                    overflow: auto;
                     font-size: 14px;
                     line-height: 21px;
                   }
@@ -167,7 +168,7 @@
             flex-basis: 100%;
             transition: flex 0.5s ease-in-out;
             .about_descr {
-              font-size: 19px;
+              font-size: 18px;
               line-height: 28px;
             }
           }

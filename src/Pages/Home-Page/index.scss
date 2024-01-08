@@ -109,6 +109,11 @@ main {
             font-size: 25px;
             font-weight: 500;
             color: #000;
+            .green_markered {
+              background: #ccff00;
+              padding: 3px;
+              border-radius: 5px;
+            }
           }
         }
       }

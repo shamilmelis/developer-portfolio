@@ -41,10 +41,13 @@ const HomePage = () => {
                         <div className={'about_box'}>
                             <img src={PersonalImage2} alt="photo" className={'about_image'}/>
                             <div className={'about_inner_box'}>
-                                <p className={'about_descr'}>Добро пожаловать в мое цифровое пространство! Я - Шамиль
-                                    Мелисов, Front End Developer с глубокой страстью к созданию исключительного
-                                    пользовательского опыта.
-                                    За время своей карьеры я приобрел разнообразные навыки и
+                                <p className={'about_descr'}>
+                                    <span className={'green_markered'}>Добро пожаловать в мое цифровое пространство!</span>
+                                </p>
+                                <p className={'about_descr'}>Я -
+                                    <span className={'green_markered'}>Шамиль Мелисов</span>, Front End Developer с глубокой страстью к созданию исключительного
+                                    пользовательского опыта.</p>
+                                <p className={'about_descr'}>За время своей карьеры я приобрел разнообразные навыки и
                                     острый взгляд на разработку Front End.</p>
                             </div>
                         </div>
