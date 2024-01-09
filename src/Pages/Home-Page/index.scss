@@ -3,17 +3,10 @@ $mont: 'Montserrat', 'sans-serif';
 $mul: 'Mulish', 'sans-serif';
 $ral: 'Raleway', 'sans-serif';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .wrapper {
   display: flex;
   flex-direction: row;
 }
-
 .empty-wrapper {
   width: 10%;
 }
@@ -22,11 +15,14 @@ $ral: 'Raleway', 'sans-serif';
   display: flex;
   flex-direction: column;
   width: 90%;
-  flex-basis: 90%;
+  height: 100vh;
+  flex-basis: 100%;
   transition: 0.5s ease-in-out;
 }
 
 main {
+  flex-grow: 1;
+  animation: contentAppear 0.5s ease-in-out;
   .introduce_section {
     padding: 80px 0 0;
     .introduce_container {

@@ -1,0 +1,112 @@
+$comf: 'Comfortaa', 'sans-serif';
+$mont: 'Montserrat', 'sans-serif';
+$mul: 'Mulish', 'sans-serif';
+$ral: 'Raleway', 'sans-serif';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.empty_wrapper {
+  width: 10%;
+}
+
+.wrapper_content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100vh;
+  flex-basis: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+main {
+  flex-grow: 1;
+  animation: contentAppear 0.5s ease-in-out;
+  .blog_section {
+    padding: 40px 20px 0;
+    .blog_container {
+      max-width: 1300px;
+      margin: 0 auto;
+      .blog_box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .blog_title {
+          font-family: $comf;
+          font-size: 45px;
+          font-weight: 500;
+          color: #000;
+        }
+        .blog_row {
+          display: flex;
+          flex-wrap: wrap;
+          .col {
+            width: 33.333%;
+            flex-basis: 33.333%;
+            padding: 8px;
+            transition: 0.5s ease-in-out;
+            .box {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              padding: 10px;
+              border: 1px solid gainsboro;
+              border-top: 10px solid #ccff00;
+              border-radius: 8px;
+              gap: 20px;
+              transition: 0.5s ease-in-out;
+              .wrapper_link {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+              }
+              .blog_info {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+                .blog_author_avatar {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 99em;
+                  object-fit: cover;
+                }
+                .blog_author {
+                  font-size: 13px;
+                  font-family: $ral;
+                  font-weight: 900;
+                  color: #000;
+                }
+              }
+              .blog_name {
+                font-size: 20px;
+                font-family: $mul;
+                font-weight: 500;
+                color: #000;
+              }
+              .blog_descr {
+                font-size: 14px;
+                font-family: $mul;
+                font-weight: 500;
+                color: gray;
+                line-height: 24px;
+              }
+              .blog_time {
+                font-size: 13px;
+                font-family: $mul;
+                color: gray;
+              }
+            }
+            .box:hover {
+              background: #ccff00;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@media screen and (max-width: 780px) {
+  main {
+    .contacts_section {
+      padding: 100px 20px 0;
+      .contacts_container {
+        .contacts_box {
+          .contacts_title {
+            font-size: 29px;
+          }
+        }
+      }
+    }
+  }
+  .empty_wrapper {
+    display: none;
+  }
+  .content_wrapper {
+    width: 100%;
+    flex-basis: 100%;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    .contacts_section {
+      .contacts_container {
+        .contacts_box {
+          .contacts_box_inner {
+            .contacts_descr {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
