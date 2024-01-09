@@ -1,0 +1,22 @@
+$comf: 'Comfortaa', 'sans-serif';
+$mont: 'Montserrat', 'sans-serif';
+$mul: 'Mulish', 'sans-serif';
+$ral: 'Raleway', 'sans-serif';
+
+footer {
+  padding: 20px;
+  .footer_container {
+    max-width: 1300px;
+    margin: 0 auto;
+    .footer_box {
+      display: flex;
+      flex-direction: column;
+      .copyrights_text {
+        font-family: $comf;
+        font-size: 14px;
+        font-weight: 500;
+        color: gray;
+      }
+    }
+  }
+}

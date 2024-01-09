@@ -101,10 +101,12 @@
   .empty-wrapper {
     display: none;
   }
-  main {
+  .wrapper_content {
     width: 100%;
     flex-basis: 100%;
     transition: flex 0.5s ease-in-out;
+  }
+  main {
     .introduce_section {
       .introduce_container {
         .introduce_row {
@@ -128,20 +130,13 @@
             font-size: 29px;
           }
           .skills_inner_box {
-            .col-hide {
-              animation: blockHide 0.5s forwards;
-            }
-            .col-show {
-              animation: blockShow 0.5s forwards;
-            }
+            overflow: hidden;
+            max-height: 48vw;
+            transition: 0.5s ease-in-out;
           }
-          @keyframes blockShow {
-            0% {display: none; opacity: 0;}
-            100% {display: block; opacity: 1;}
-          }
-          @keyframes blockHide {
-            0% {display: block; opacity: 1;}
-            100% {display: none; opacity: 0;}
+          .skills_inner_box.Show {
+            max-height: 500vw;
+            transition: 0.5s ease-in-out;
           }
           .skills_title {
             font-size: 29px;
@@ -186,16 +181,19 @@
     .skills_section {
       .skills_container {
         .skills_box {
+          .skills_inner_box {
+            overflow: hidden;
+            max-height: 170vw;
+            transition: 0.5s ease-in-out;
+          }
           .instruments_inner_box {
             .col {
-              width: 100%;
               flex-basis: 100%;
               transition: 0.5s ease-in-out;
             }
           }
           .skills_inner_box {
             .col {
-              width: 100%;
               flex-basis: 100%;
               transition: 0.5s ease-in-out;
             }
