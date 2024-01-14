@@ -131,6 +131,9 @@ $ral: 'Raleway', 'sans-serif';
                   color: #fff;
                 }
               }
+              .box:hover {
+                background: #ccff00;
+              }
             }
           }
         }
@@ -453,7 +456,7 @@ main {
               display: block;
               width: 100%;
               height: 100%;
-              z-index: 999;
+              z-index: 2;
             }
             .socialmedia_img {
               display: block;

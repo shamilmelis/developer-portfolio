@@ -1,22 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../Aside/index.scss'
 import '../Aside/media.scss'
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
-const Aside = ({modeSelect, modeSelected}) => {
+const Aside = () => {
     const [menu, setMenu] = useState(false)
-    const [dark, setDark] = useState()
-
-    useEffect(() => {
-        axios.put(`https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme/1`, {eable: modeSelect})
-            .then(res => {
-              setDark(res.data ? modeSelect : res.data)
-            })
-    }, [modeSelect])
+    const [modeSelect, modeSelected] = useState(false)
+    const [dark, setDark] = useState(false)
     const modeSelectFn = () => {
         modeSelected(!modeSelect)
+        axios.put(`https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme/1`, {eable: modeSelect})
+            .then(res => {
+                setDark(res.data.eable ? modeSelect : res.data.eable)
+                console.log(dark)
+            })
     }
+
 
     const menuFunction = () => {
         setMenu(!menu)
@@ -57,10 +57,10 @@ const Aside = ({modeSelect, modeSelected}) => {
                     </div>
                 </div>
                 <div className={'mode_box'}>
-                    <div className={modeSelect === false ? 'mode_box_inner' : 'mode_box_inner dark'}>
+                    <div className={dark === false ? 'mode_box_inner' : (dark === true ? 'mode_box_inner dark' : 'mode_box_inner')}>
                         <button className={'mode_button'} onClick={() => modeSelectFn()}></button>
                         <div className={'mode_box_inner_box'}>
-                            <span className={'mode_wrapper'}>{modeSelect === false ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}</span>
+                            <span className={'mode_wrapper'}>{dark === false ? <i className="fa-solid fa-moon"></i> : (dark === true ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon"></i>)}</span>
                         </div>
                     </div>
                 </div>

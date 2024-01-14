@@ -3,12 +3,21 @@ import '../Contacts-Page/index.scss'
 import '../Contacts-Page/media.scss'
 import Aside from "../../Components/Aside";
 import Footer from "../../Components/Footer";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import axios from "axios";
 const ContactsPage = () => {
-    const [modeSelect, setModeSelect] = useState(false)
+    const [getDark, setGetDark] = useState(false)
+    useEffect(() => {
+        setTimeout(() => {
+            axios('https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme/1')
+                .then(res => {
+                    setGetDark(res.data)
+                })
+        }, 500)
+    }, [getDark])
     return (
-        <div className={modeSelect === false ? 'wrapper' : 'wrapper dark-theme'}>
-            <Aside modeSelect={modeSelect} modeSelected={setModeSelect}></Aside>
+        <div className={getDark.eable === false ? 'wrapper' : 'wrapper dark-theme'}>
+            <Aside></Aside>
             <div className={'empty-wrapper'}></div>
             <div className={'content_wrapper'}>
                 <main>

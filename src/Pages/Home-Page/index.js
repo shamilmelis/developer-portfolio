@@ -2,31 +2,30 @@ import React from 'react'
 import '../Home-Page/index.scss'
 import '../Home-Page/media.scss'
 import Aside from "../../Components/Aside";
-import PersonalImage from '../../Images/personal.jpg'
 import PersonalImage2 from '../../Images/sham.jpg'
 import {useState, useEffect} from "react";
 import Footer from "../../Components/Footer";
 import axios from "axios";
+
 const HomePage = () => {
     const [blocks, setBlocks] = useState(false)
-    const [modeSelect, setModeSelect] = useState(false)
-    const [darkTheme, setDarkTheme] = useState([])
+    const [getDark, setGetDark] = useState(false)
+
     useEffect(() => {
-        axios.get('https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme')
-            .then(res => {
-                if (res) {
-                    setDarkTheme(res.data.map(el => el === el.eable))
-                }
-            })
-            .catch(err => console.log(err))
-    }, [darkTheme])
+        setTimeout(() => {
+            axios('https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme/1')
+                .then(res => {
+                    setGetDark(res.data)
+                })
+        }, 500)
+    }, [getDark])
 
     const toggleBlocks = () => {
         setBlocks(!blocks)
     }
     return (
-        <div className={darkTheme === false ? 'wrapper' : 'wrapper dark-theme'}>
-            <Aside modeSelect={modeSelect} modeSelected={setModeSelect}></Aside>
+        <div className={getDark.eable === false ? 'wrapper' : 'wrapper dark-theme'}>
+            <Aside></Aside>
             <div className={'empty-wrapper'}></div>
             <div className={'content_wrapper'}>
                 <main>
@@ -35,7 +34,7 @@ const HomePage = () => {
                             <div className={'introduce_row'}>
                                 <div className={'col-6'}>
                                     <div className={'box box_image'}>
-                                        <img src={PersonalImage} alt="photo" className={'developer_img'}/>
+                                        <img src={PersonalImage2} alt="photo" className={'developer_img'}/>
                                     </div>
                                 </div>
                                 <div className={'col-6'}>
