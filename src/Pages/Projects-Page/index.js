@@ -5,12 +5,14 @@ import Aside from "../../Components/Aside";
 import MoviedbImg from '../../Images/Projects/moviedb.png'
 import TourwebImg from '../../Images/Projects/tourweb.png'
 import Footer from "../../Components/Footer";
+import {useState} from "react";
 const ProjectsPage = () => {
+    const [modeSelect, setModeSelect] = useState(false)
     return (
-        <div className={'wrapper'}>
-            <Aside></Aside>
+        <div className={modeSelect === false ? 'wrapper' : 'wrapper dark-theme'}>
+            <Aside modeSelect={modeSelect} modeSelected={setModeSelect}></Aside>
             <div className={'empty-wrapper'}></div>
-            <div className={'wrapper_content'}>
+            <div className={'content_wrapper'}>
                 <main>
                     <div className={'projects_section'}>
                         <div className={'projects_container'}>
@@ -21,7 +23,6 @@ const ProjectsPage = () => {
                                         <div className={'box'}>
                                             <a href="https://moviedb-project-seven.vercel.app/" className={'wrapper_link'}></a>
                                             <img src={MoviedbImg} alt="img" className={'project_img'}/>
-                                            <span className={'project_name'}>The TMDB</span>
                                             <p className={'project_descr'}>The MovieDB - сайт по фильмам, сериалам</p>
                                         </div>
                                     </div>
@@ -29,7 +30,6 @@ const ProjectsPage = () => {
                                         <div className={'box'}>
                                             <a href="https://best-to-fly.vercel.app/" className={'wrapper_link'}></a>
                                             <img src={TourwebImg} alt="img" className={'project_img'}/>
-                                            <span className={'project_name'}>Best to Fly | BTF</span>
                                             <p className={'project_descr'}>Best to Fly - сайт по турам</p>
                                         </div>
                                     </div>

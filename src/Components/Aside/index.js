@@ -3,11 +3,19 @@ import '../Aside/index.scss'
 import '../Aside/media.scss'
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-const Aside = () => {
-    const [modeSelect, setModeSelect] = useState(false)
+import axios from "axios";
+const Aside = ({modeSelect, modeSelected}) => {
     const [menu, setMenu] = useState(false)
+    const [dark, setDark] = useState()
+
+    useEffect(() => {
+        axios.put(`https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme/1`, {eable: modeSelect})
+            .then(res => {
+              setDark(res.data ? modeSelect : res.data)
+            })
+    }, [modeSelect])
     const modeSelectFn = () => {
-        setModeSelect(!modeSelect)
+        modeSelected(!modeSelect)
     }
 
     const menuFunction = () => {

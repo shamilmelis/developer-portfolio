@@ -4,20 +4,31 @@ import '../Home-Page/media.scss'
 import Aside from "../../Components/Aside";
 import PersonalImage from '../../Images/personal.jpg'
 import PersonalImage2 from '../../Images/sham.jpg'
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Footer from "../../Components/Footer";
-
+import axios from "axios";
 const HomePage = () => {
     const [blocks, setBlocks] = useState(false)
+    const [modeSelect, setModeSelect] = useState(false)
+    const [darkTheme, setDarkTheme] = useState([])
+    useEffect(() => {
+        axios.get('https://6579c19f1acd268f9af9f4fc.mockapi.io/darkTheme')
+            .then(res => {
+                if (res) {
+                    setDarkTheme(res.data.map(el => el === el.eable))
+                }
+            })
+            .catch(err => console.log(err))
+    }, [darkTheme])
 
     const toggleBlocks = () => {
         setBlocks(!blocks)
     }
     return (
-        <div className={'wrapper'}>
-            <Aside></Aside>
+        <div className={darkTheme === false ? 'wrapper' : 'wrapper dark-theme'}>
+            <Aside modeSelect={modeSelect} modeSelected={setModeSelect}></Aside>
             <div className={'empty-wrapper'}></div>
-            <div className={'wrapper_content'}>
+            <div className={'content_wrapper'}>
                 <main>
                     <section className={'introduce_section'}>
                         <div className={'introduce_container'}>

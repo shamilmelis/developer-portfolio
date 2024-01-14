@@ -3,10 +3,12 @@ import '../Contacts-Page/index.scss'
 import '../Contacts-Page/media.scss'
 import Aside from "../../Components/Aside";
 import Footer from "../../Components/Footer";
+import {useState} from "react";
 const ContactsPage = () => {
+    const [modeSelect, setModeSelect] = useState(false)
     return (
-        <div className={'wrapper'}>
-            <Aside></Aside>
+        <div className={modeSelect === false ? 'wrapper' : 'wrapper dark-theme'}>
+            <Aside modeSelect={modeSelect} modeSelected={setModeSelect}></Aside>
             <div className={'empty-wrapper'}></div>
             <div className={'content_wrapper'}>
                 <main>

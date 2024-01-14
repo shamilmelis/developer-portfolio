@@ -3,25 +3,19 @@ $mont: 'Montserrat', 'sans-serif';
 $mul: 'Mulish', 'sans-serif';
 $ral: 'Raleway', 'sans-serif';
 
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
+.wrapper.dark-theme {
+  main {
+    .contacts_section {
+      .contacts_container {
+        .contacts_box {
+          .contacts_title {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
-
-.empty_wrapper {
-  width: 10%;
-}
-
-.content_wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 100vh;
-  flex-basis: 100%;
-  transition: 0.5s ease-in-out;
-}
-
 
 main {
   flex-grow: 1;

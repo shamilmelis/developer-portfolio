@@ -3,27 +3,38 @@ $mont: 'Montserrat', 'sans-serif';
 $mul: 'Mulish', 'sans-serif';
 $ral: 'Raleway', 'sans-serif';
 
-.wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
 @keyframes contentAppear {
   0% {opacity: 0}
   100% {opacity: 1}
 }
 
-.empty_wrapper {
-  width: 10%;
-}
 
-.wrapper_content {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 100vh;
-  flex-basis: 100%;
-  transition: 0.5s ease-in-out;
+.wrapper.dark-theme {
+  main {
+    .projects_section {
+      .projects_container {
+        .projects_row {
+          .projects_title {
+            color: #fff;
+          }
+          .projects_row_box {
+            .col {
+              .box {
+                border: none;
+                background: RGB(44, 45, 47);
+                .project_descr {
+                  color: #fff;
+                }
+              }
+              .box:hover {
+                background: #ccff00;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 main {

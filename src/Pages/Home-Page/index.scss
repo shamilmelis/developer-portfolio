@@ -9,15 +9,134 @@ $ral: 'Raleway', 'sans-serif';
 }
 .empty-wrapper {
   width: 10%;
+  min-height: 100%;
+  background: #fff;
 }
 
-.wrapper_content {
+.content_wrapper {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   flex-basis: 100%;
   transition: 0.5s ease-in-out;
+}
+
+.wrapper.dark-theme {
+  aside {
+    background: RGB(44,45,47);
+    border: none;
+    .aside-container {
+      .info_box {
+        .info_box_position {
+          .person_name {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .empty-wrapper {
+    transition: 0.5s ease-in-out;
+    background: RGB(25,25,25);
+  }
+  .content_wrapper {
+    transition: 0.5s ease-in-out;
+    background: RGB(25,25,25);
+    main {
+      transition: 0.5s ease-in-out;
+      background: RGB(25,25,25);
+      .introduce_section {
+        .introduce_container {
+          .introduce_row {
+            .col-6 {
+              .box_personal {
+                .developer_personal {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      .about_section {
+        .about_container {
+          .about_box {
+            .about_inner_box {
+              background: RGB(44,45,47);
+              .green_markered {
+                color: #000;
+              }
+              .about_descr {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .skills_section {
+        .skills_container {
+          .skills_box {
+            .instruments_title {
+              color: #fff;
+            }
+            .instruments_inner_box {
+              .col {
+                .box {
+                  background: RGB(44, 45, 47);
+                  border: none;
+                  .instruments_name {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            .skills_title {
+              color: #fff;
+            }
+            .skills_inner_box {
+              .col {
+                .box {
+                  background: RGB(44, 45, 47);
+                  border: none;
+                  .skill_name {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            .show_blocks {
+              background: RGB(44,45,47);
+              color: #fff;
+              border: none;
+            }
+          }
+        }
+      }
+      .socialmedia_section {
+        .socialmedia_container {
+          .socialmedia_title {
+            color: #fff;
+          }
+          .socialmedia_row {
+            .col {
+              .box {
+                background: RGB(44,45,47);
+                border: none;
+                .socialmedia_name {
+                  color: #fff;
+                }
+                .route_to {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 main {
@@ -342,6 +461,7 @@ main {
               width: 100%;
               height: 70%;
               object-fit: cover;
+              border-radius: 8px;
             }
             .socialmedia_name {
               font-family: $mont;
