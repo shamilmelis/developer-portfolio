@@ -4,6 +4,7 @@ import '../Projects-Page/media.scss'
 import Aside from "../../Components/Aside";
 import MoviedbImg from '../../Images/Projects/moviedb.png'
 import TourwebImg from '../../Images/Projects/tourweb.png'
+import TeplyeRykiImg from '../../Images/Projects/teplyeryki.png'
 import Footer from "../../Components/Footer";
 import {useState, useEffect} from "react";
 import axios from "axios";
@@ -41,6 +42,13 @@ const ProjectsPage = () => {
                                             <a href="https://best-to-fly.vercel.app/" className={'wrapper_link'}></a>
                                             <img src={TourwebImg} alt="img" className={'project_img'}/>
                                             <p className={'project_descr'}>Best to Fly - сайт по турам</p>
+                                        </div>
+                                    </div>
+                                    <div className={'col'}>
+                                        <div className={'box'}>
+                                            <a href="https://crm-animal.vercel.app/" className={'wrapper_link'}></a>
+                                            <img src={TeplyeRykiImg} alt="img" className={'project_img'}/>
+                                            <p className={'project_descr'}>Помощь Животным (CRM) - питомцы в теплые руки</p>
                                         </div>
                                     </div>
                                 </div>
