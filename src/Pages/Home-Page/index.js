@@ -6,7 +6,6 @@ import PersonalImage2 from '../../Images/sham.jpg'
 import {useState, useEffect} from "react";
 import Footer from "../../Components/Footer";
 import axios from "axios";
-
 const HomePage = () => {
     const [blocks, setBlocks] = useState(false)
     const [getDark, setGetDark] = useState(false)
@@ -42,7 +41,7 @@ const HomePage = () => {
                                         <h1 className={'developer_personal'}>Хэй👋 - Я Шамиль</h1>
                                         <p className={'developer_descr'}>Разрабатываю веб-сайты и веб-приложения 💻</p>
                                         <p className={'developer_descr'}>Коротко говоря - Фронтендер 🤗</p>
-                                        <p className={'developer_descr'}>P.S... листай дальше</p>
+                                        <p className={'developer_descr'}>P.S.. листай дальше</p>
                                     </div>
                                 </div>
                             </div>
